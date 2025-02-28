@@ -1,0 +1,176 @@
+<<<<<<< HEAD
+[
+    {
+        "name": {
+            "fr": "Formes sous la pluie",
+            "en": "Shapes under the rain"
+        },
+        "year": "2024",
+        "id": "rainShapes",
+        "description": {
+            "fr": "Cette installation ayant été réalisée en vue d’une exposition utilise une technologie de body-tracking pour détecter le corps du visiteur dans l’espace et  créer une représentation virtuelle de celui-ci.\nChaque bonhomme bâton interagie avec la pluie et les autres visiteurs.\nCréation avec P5.js et MediaPipe en JavaScript.",
+            "en": "This installation, created for an exhibition, uses body-tracking technology to detect the visitor's body in space and create a virtual representation of it.\nEach stickman interacts with the rain and other visitors.\nCreation with P5.js and MediaPipe in JavaScript."
+        },
+        "type": {
+            "fr": "Installation",
+            "en": "Installation"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Catline Banana",
+            "en": "Catline Banana"
+        },
+        "year": "2021",
+        "id": "catline",
+        "description": {
+            "fr": "Projection Mapping du visage d’une diseuse de bonne aventure pouvant interagir avec le visiteur et tenter de prédire son avenir. Ce projet a été réalisé en équipe.\nRéalisation du visage du personnage, l’application pour la projection et la structure du support.",
+            "en": "Projection Mapping of a fortune teller's face that can interact with the visitor and try to predict their future. This project was done in a team.\nRealization of the character's face, the application for the projection and the structure of the support."
+        },
+        "type": {
+            "fr": "Installation",
+            "en": "Installation"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Réalité augmentée",
+            "en": "Augmented reality"
+        },
+        "year": "2022-2024",
+        "id": "ar",
+        "description": {
+            "fr": "Déformation d’une image en utilisant des marqueurs ARUCO en à l’aide d’un Canvas HTML et du JavaScript. Hand-tracking et affichage en perspective d’une image.",
+            "en": "Deformation of an image using ARUCO markers with the help of an HTML Canvas and JavaScript. Hand-tracking and perspective display of an image."
+        },
+        "type": {
+            "fr": "Experience Web",
+            "en": "Web Experience"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Montre SVG",
+            "en": "SVG Watch"
+        },
+        "year": "2025",
+        "id": "watch",
+        "description": {
+            "fr": "Montre crée dans le cadre de nos cours de graphisme à Gobelins. Le but était de reproduire une montre en utilisant le logiciel Illustrator à partir d'une image de référence)",
+            "en": "Watch created as part of our graphic design courses at Gobelins. The goal was to reproduce a watch using Illustrator software from a reference image."
+        },
+        "type": {
+            "fr": "Graphisme",
+            "en": "Graphic Design"
+        },
+        "category": "school"
+    },
+    {
+        "name": {
+            "fr": "Filtres Instagram",
+            "en": "Instagram Filters"
+        },
+        "year": "2024",
+        "id": "instagramFilters",
+        "description": {
+            "fr": "Ces filtre ont été réalisés à l'aide de Spark AR Studio pour Instagram. J'ai pu créer ces filtres pour m'initier à la réalité augmentée sur visages et formes. Ces filtres ont été disponible sur mon compte Instagram et ont été utilisé des miliers de fois.",
+            "en": "These filters were created using Spark AR Studio for Instagram. I was able to create these filters to get started with augmented reality on faces and shapes. These filters were available on my Instagram account and were used thousands of times."
+        },
+        "type": {
+            "fr": "Filtre Instagram",
+            "en": "Instagram Filter"
+        },
+        "category": "personal"
+    }
+=======
+[
+    {
+        "name": {
+            "fr": "Formes sous la pluie",
+            "en": "Shapes under the rain"
+        },
+        "year": "2024",
+        "id": "rainShapes",
+        "description": {
+            "fr": "Cette installation ayant été réalisée en vue d’une exposition utilise une technologie de body-tracking pour détecter le corps du visiteur dans l’espace et  créer une représentation virtuelle de celui-ci.\nChaque bonhomme bâton interagie avec la pluie et les autres visiteurs.\nCréation avec P5.js et MediaPipe en JavaScript.",
+            "en": "This installation, created for an exhibition, uses body-tracking technology to detect the visitor's body in space and create a virtual representation of it.\nEach stickman interacts with the rain and other visitors.\nCreation with P5.js and MediaPipe in JavaScript."
+        },
+        "type": {
+            "fr": "Installation",
+            "en": "Installation"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Catline Banana",
+            "en": "Catline Banana"
+        },
+        "year": "2021",
+        "id": "catline",
+        "description": {
+            "fr": "Projection Mapping du visage d’une diseuse de bonne aventure pouvant interagir avec le visiteur et tenter de prédire son avenir. Ce projet a été réalisé en équipe.\nRéalisation du visage du personnage, l’application pour la projection et la structure du support.",
+            "en": "Projection Mapping of a fortune teller's face that can interact with the visitor and try to predict their future. This project was done in a team.\nRealization of the character's face, the application for the projection and the structure of the support."
+        },
+        "type": {
+            "fr": "Installation",
+            "en": "Installation"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Réalité augmentée",
+            "en": "Augmented reality"
+        },
+        "year": "2022-2024",
+        "id": "ar",
+        "description": {
+            "fr": "Déformation d’une image en utilisant des marqueurs ARUCO en à l’aide d’un Canvas HTML et du JavaScript. Hand-tracking et affichage en perspective d’une image.",
+            "en": "Deformation of an image using ARUCO markers with the help of an HTML Canvas and JavaScript. Hand-tracking and perspective display of an image."
+        },
+        "type": {
+            "fr": "Experience Web",
+            "en": "Web Experience"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Montre SVG",
+            "en": "SVG Watch"
+        },
+        "year": "2025",
+        "id": "watch",
+        "description": {
+            "fr": "Montre crée dans le cadre de nos cours de graphisme à Gobelins. Le but était de reproduire une montre en utilisant le logiciel Illustrator à partir d'une image de référence)",
+            "en": "Watch created as part of our graphic design courses at Gobelins. The goal was to reproduce a watch using Illustrator software from a reference image."
+        },
+        "type": {
+            "fr": "Graphisme",
+            "en": "Graphic Design"
+        },
+        "category": "school"
+    },
+    {
+        "name": {
+            "fr": "Filtres Instagram",
+            "en": "Instagram Filters"
+        },
+        "year": "2024",
+        "id": "instagramFilters",
+        "description": {
+            "fr": "Ces filtre ont été réalisés à l'aide de Spark AR Studio pour Instagram. J'ai pu créer ces filtres pour m'initier à la réalité augmentée sur visages et formes. Ces filtres ont été disponible sur mon compte Instagram et ont été utilisé des miliers de fois.",
+            "en": "These filters were created using Spark AR Studio for Instagram. I was able to create these filters to get started with augmented reality on faces and shapes. These filters were available on my Instagram account and were used thousands of times."
+        },
+        "type": {
+            "fr": "Filtre Instagram",
+            "en": "Instagram Filter"
+        },
+        "category": "personal"
+    }
+>>>>>>> 48a1448e9017e3338ec8dcc84b37133590ee1049
+]
