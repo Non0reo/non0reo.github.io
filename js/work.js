@@ -81,7 +81,7 @@ document.body.addEventListener('mousemove', (e) => {
 
 
 function showProjectPanel() {
-    document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
 }
 
 function getProjectBasePath(id) {

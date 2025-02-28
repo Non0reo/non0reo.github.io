@@ -5,8 +5,8 @@
 
 
 .preview {
-    /* display: none; */
-    top: 50%;
+    display: none;
+    /* top: 50%; */
     position: fixed;
     pointer-events: none;
     width: var(--previewSize);
