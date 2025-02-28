@@ -38,8 +38,9 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
 
 
 
+    preview.style.display = 'none';
     document.querySelectorAll("#projects > li.project").forEach(element => {    
-        element.addEventListener('mouseover', (e) => {
+        element.addEventListener('mouseenter', (e) => {
             preview.style.display = 'block';
             selectedProject = data.find(project => project.id == element.getAttribute('data-project'));
             /* preview.innerHTML = `
@@ -53,6 +54,19 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
     
         element.addEventListener('mouseout', (e) => {
             preview.style.display = 'none';
+        });
+
+        element.addEventListener('click', (e) => {
+            showProjectPanel();
+            const projectView = document.querySelector('#project-view');
+            projectView.style.backgroundColor = selectedProject.color;
+            projectView.style.transform = 'translateX(50vw)';
+            document.querySelector("#main-view").style.width = '50vw';
+
+            projectView.querySelector('.project-title').innerText = selectedProject.name[language];
+            projectView.querySelector('.project-year').innerText = selectedProject.year;
+            projectView.querySelector('.project-description').innerText = selectedProject.description[language];
+            projectView.querySelector('.project-tags').innerHTML = `<span class="text tag">${selectedProject.type[language]}</span>`;
         });
     });
 });

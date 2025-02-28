@@ -14,43 +14,62 @@
     <div id="background1"></div>
     <div id="background2"></div>
 
-    <header>
-        <a href=""><h1 class="text">Nolhan Pieroni</h1></a>
-
-        <nav class="menu">
-            <ul>
-                <li><a class="text nav-links" href="">home.</a></li>
-                <li><a class="text nav-links" href="">work.</a></li>
-                <li><a class="text nav-links" href="">contact.</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <!-- <span style="display: flex; align-items: baseline; white-space: pre;"><h2 class="text">Hi, I'm   </h2><a href=""><h1 class="text">Nolhan Pieroni</h1></a></span> -->
-            <p class="text">I'm a <span class="custom-text" data-effect="boat" data-text="Creative Developper"></span> based in Paris, France. My goal is to highlight the link between art and technology<!-- <span class="custom-text" data-effect="wave" data-text="art and technology"></span> --> using <span class="custom-text" data-effect="wave" data-text="cool mediums"></span> such as Interactive Instalations, Web Experiences, Video Mapping and more<span class="custom-text" data-effect="typewriter" data-text="eeeeeeeeeeeeeeeeeeeeeeeeeee"></span></p>
-            <button id="see-projects-btn" onclick="showProjectPanel()">See my Projects</button>
-        </section>
-
-        <section id="work">
-            <div class="preview" display="none">      
-                <img src="assets/imgs/projects/catline/preview.png" alt="" class="preview-img">
-
-                <h3 class="text preview-title">Project Name</h3>
-                <p class="text preview-year">2025</p>
-            </div>
-
-            <h2 class="text"><b>Projects</b></h2>
-
-            <ul id="projects"></ul>
-
-        </section>
-    </main>
+    <div id="main-view">
+        <header>
+            <a href=""><h1 class="text">Nolhan Pieroni</h1></a>
+    
+            <nav class="menu">
+                <ul>
+                    <li><a class="text nav-links" href="">home.</a></li>
+                    <li><a class="text nav-links" href="">work.</a></li>
+                    <li><a class="text nav-links" href="">contact.</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="home">
+                <!-- <span style="display: flex; align-items: baseline; white-space: pre;"><h2 class="text">Hi, I'm   </h2><a href=""><h1 class="text">Nolhan Pieroni</h1></a></span> -->
+                <p class="text">I'm a <span class="custom-text" data-effect="boat" data-text="Creative Developper"></span> based in Paris, France. My goal is to highlight the link between art and technology<!-- <span class="custom-text" data-effect="wave" data-text="art and technology"></span> --> using <span class="custom-text" data-effect="wave" data-text="cool mediums"></span> such as Interactive Instalations, Web Experiences, Video Mapping and more<span class="custom-text" data-effect="typewriter" data-text="eeeeeeeeeeeeeeeeeeeeeeeeeee"></span></p>
+                <button id="see-projects-btn" onclick="showProjectPanel()">See my Projects</button>
+            </section>
+    
+            <section id="work">
+                <div class="preview" display="none">      
+                    <img src="assets/imgs/projects/catline/preview.png" alt="" class="preview-img">
+    
+                    <h3 class="text preview-title">Project Name</h3>
+                    <p class="text preview-year">2025</p>
+                </div>
+    
+                <h2 class="text"><b>Projects</b></h2>
+    
+                <ul id="projects"></ul>
+    
+            </section>
+        </main>
+    </div>
 
     <!-- <iframe src="html/project.html" frameborder="0" width="100%" id="project-view"></iframe> -->
     <div id="project-view">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sint quae, est qui optio nobis tenetur officia deleniti, et excepturi dolor. Laudantium corrupti necessitatibus aliquam, itaque atque suscipit vitae maxime?
+
+        <button class="no-style-btn leave-view"><img src="assets/imgs/ui/cross.svg" alt=""></button>
+        
+        <div id="project-top">
+            <h3 class="text project-title">Project Name</h3>
+            <p class="text project-year">2025</p>
+            <div class="project-tags">
+                <span class="text tag">Tag1</span>
+                <span class="text tag">Tag2</span>
+                <span class="text tag">Tag3</span>
+            </div>
+        </div>
+
+        <div id="project-main">
+            
+            <p class="text project-description">blabla</p>
+        </div>
+
     </div>
 
 
@@ -61,4 +80,5 @@
     <script src="js/script.js"></script>
     <script src="js/home.js"></script>
     <script src="js/work.js"></script>
+    <script src="js/projects.js"></script>
 </html>
