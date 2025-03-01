@@ -57,12 +57,18 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
         });
 
         element.addEventListener('click', (e) => {
-            showProjectPanel();
+            //showProjectPanel();
             const projectView = document.querySelector('#project-view');
             projectView.style.backgroundColor = selectedProject.color;
             projectView.style.transform = 'translateX(50vw)';
             document.querySelector("#main-view").style.width = '50vw';
+            document.querySelector("#home .text").style.fontSize = '1rem';
 
+            document.querySelectorAll("#projects > li.project").forEach(element => {
+                element.classList.remove('active');
+            });
+            element.classList.add('active');
+            
             projectView.querySelector('.project-title').innerText = selectedProject.name[language];
             projectView.querySelector('.project-year').innerText = selectedProject.year;
             projectView.querySelector('.project-description').innerText = selectedProject.description[language];
@@ -91,11 +97,47 @@ document.body.addEventListener('mousemove', (e) => {
         backgroundChangeAnim({clientX: window.innerWidth / 2, clientY: window.innerHeight / 2}, 1);
     }
 } */
+window.addEventListener('scroll', (e) => {
+    const scrollAmount = (document.body.scrollTop || document.documentElement.scrollTop);
+    const pageSize = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = scrollAmount / pageSize * 100;
+    //console.log(scrollAmount, pageSize, scrollPercentage);
+    //console.log(document.documentElement.scrollTop, window.innerHeight, document.documentElement.scrollHeight - document.documentElement.clientHeight, scrollPercentage);
+    console.log(scrollAmount, window.innerHeight);
+
+    let activeBackground = background.id.replace('background', '');
+
+    if (scrollAmount > window.innerHeight) {
+        if (activeBackground === '1') {
+            backgroundChangeAnim(1);
+        }
+
+        const middle = scrollPercentage /* + window.innerHeight / 2 */;
+        const projectsDiv = document.querySelector('#work');
+
+        //projectsDiv.style.transform = `translateY(${middle}px)`;
+
+
+    }
+    if (scrollAmount < window.innerHeight) {
+        if (activeBackground === '2') {
+            backgroundChangeAnim(1);
+        }
+    }
+});
 
 
 
 function showProjectPanel() {
-    document.querySelector('#work').scrollIntoView({ behavior: 'smooth' });
+    const element = document.querySelector('#work');
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - 300;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+   });
+
 }
 
 function getProjectBasePath(id) {

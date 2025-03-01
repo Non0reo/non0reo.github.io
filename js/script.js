@@ -68,8 +68,14 @@ function backgroundGrow(rule, value, duration = 1) {
 
 
 document.body.addEventListener('mousemove', (e) => {
-    background.style.left = e.clientX + 'px';
-    background.style.top = e.clientY + 'px';
+    const background1 = document.getElementById('background1');
+    const background2 = document.getElementById('background2');
+
+    background1.style.left = e.clientX + 'px';
+    background1.style.top = e.clientY + 'px';
+
+    background2.style.left = e.clientX + 'px';
+    background2.style.top = e.clientY + 'px';
 });
 
 /* document.body.addEventListener('mousedown', (e) => {
@@ -125,12 +131,12 @@ window.onload = () => {
 
 function changeMainBackgorund() {
     let activeBackground = background.id.replace('background', '');
-    // background.style.transitionProperty = 'none';
-    // background.style.transitionDuration = '0s';
-    // background.style.transitionTimingFunction = 'none';
+    background.style.transitionProperty = 'none';
+    background.style.transitionDuration = '0s';
+    background.style.transitionTimingFunction = 'none';
     background.style.zIndex = '-10';
-    background.style.top = '50%';
-    background.style.left = '50%';
+    /* background.style.top = '50%';
+    background.style.left = '50%'; */
 
     background = activeBackground === '1' ? document.getElementById('background2') : document.getElementById('background1');
     background.style = '';
@@ -141,16 +147,16 @@ function changeMainBackgorund() {
 }
 
 let pointTimeout;
-function backgroundChangeAnim(e, duration) {
+function backgroundChangeAnim(duration) {
     clearTimeout(pointTimeout);
     backgroundGrow('custom', {
-        top: e.clientY + 'px',
-        left: e.clientX + 'px',
+        top: background.style.top,
+        left: background.style.left
     }, duration);
     
     pointTimeout = setTimeout(() => {
-        changePoint(e);
-    }, duration * 1000);
+        changePoint();
+    }, duration * 800);
 
 
     //swapRootColors();
@@ -168,12 +174,16 @@ function backgroundChangeAnim(e, duration) {
     }, duration * 1000); */
 }
 
-function changePoint(e) {
+function changePoint() {
+    const oldBackground = background;
+    
     changeMainBackgorund();
     backgroundNone();
     background.style.transition = 'top 0.1s ease-in-out, left 0.1s ease-in-out';
-    background.style.left = e.clientX + 'px';
-    background.style.top = e.clientY + 'px';
+    // background.style.left = e.clientX + 'px';
+    // background.style.top = e.clientY + 'px';
+    background.style.left = oldBackground.style.left;
+    background.style.top = oldBackground.style.top;
 
     setTimeout(() => {
         backgroundPoint();
