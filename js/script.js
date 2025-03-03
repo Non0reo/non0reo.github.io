@@ -117,6 +117,7 @@ window.onload = () => {
             btn.style.animation = 'fadeIn 2s ease-in-out forwards, pushLeft 2s forwards';
         }, i * 200);
     });
+
 }
 
 
@@ -157,22 +158,8 @@ function backgroundChangeAnim(duration) {
     pointTimeout = setTimeout(() => {
         changePoint();
     }, duration * 800);
-
-
-    //swapRootColors();
-    
-    /* setTimeout(() => {
-        backgroundNone();
-        
-        setTimeout(() => {
-            backgroundPoint();
-        }, 10);
-        // backgroundNone();
-        // console.log(background.style.width, background.style.height)
-        // backgroundPoint(10);
-        // console.log(background.style.width, background.style.height)
-    }, duration * 1000); */
 }
+
 
 function changePoint() {
     const oldBackground = background;

@@ -20,9 +20,9 @@
     
             <nav class="menu">
                 <ul>
-                    <li><a class="text nav-links" href="">home.</a></li>
-                    <li><a class="text nav-links" href="">work.</a></li>
-                    <li><a class="text nav-links" href="">contact.</a></li>
+                    <li><button class="nav-links no-style-btn" onclick="scrollToElement('#home')"><p class="text">home.</p></button></li>
+                    <li><button class="nav-links no-style-btn" onclick="scrollToElement('#work')"><p class="text">work.</p></button></li>
+                    <li><button class="nav-links no-style-btn" onclick="scrollToElement('#work')"><p class="text">contact.</p></button></li>
                 </ul>
             </nav>
         </header>
@@ -31,7 +31,7 @@
             <section id="home">
                 <!-- <span style="display: flex; align-items: baseline; white-space: pre;"><h2 class="text">Hi, I'm   </h2><a href=""><h1 class="text">Nolhan Pieroni</h1></a></span> -->
                 <p class="text">I'm a <span class="custom-text" data-effect="boat" data-text="Creative Developper"></span> based in Paris, France. My goal is to highlight the link between art and technology<!-- <span class="custom-text" data-effect="wave" data-text="art and technology"></span> --> using <span class="custom-text" data-effect="wave" data-text="cool mediums"></span> such as Interactive Instalations, Web Experiences, Video Mapping and more<span class="custom-text" data-effect="typewriter" data-text="eeeeeeeeeeeeeeeeeeeeeeeeeee"></span></p>
-                <button id="see-projects-btn" onclick="showProjectPanel()">See my Projects</button>
+                <button id="see-projects-btn" onclick="scrollToElement('#work')">See my Projects</button>
             </section>
     
             <section id="work">
@@ -53,12 +53,12 @@
     <!-- <iframe src="html/project.html" frameborder="0" width="100%" id="project-view"></iframe> -->
     <div id="project-view">
 
-        <button class="no-style-btn leave-view"><img src="assets/imgs/ui/cross.svg" alt=""></button>
+        <button class="no-style-btn leave-view need-invert"><img src="assets/imgs/ui/cross.svg" alt=""></button>
         
         <div id="project-top">
             <h3 class="text project-title">Project Name</h3>
             <p class="text project-year">2025</p>
-            <div class="project-tags">
+            <div class="project-tags invert-element">
                 <span class="text tag">Tag1</span>
                 <span class="text tag">Tag2</span>
                 <span class="text tag">Tag3</span>
@@ -66,8 +66,8 @@
         </div>
 
         <div id="project-main">
-            
             <p class="text project-description">blabla</p>
+            <div class="project-pictures"></div>
         </div>
 
     </div>

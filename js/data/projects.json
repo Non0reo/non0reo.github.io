@@ -15,7 +15,8 @@
             "en": "Installation"
         },
         "category": "personal",
-        "color": "#3b3a67"
+        "color": "#3b3a67",
+        "filecount": 6
     },
     {
         "name": {
@@ -54,18 +55,18 @@
     },
     {
         "name": {
-            "fr": "Montre SVG",
-            "en": "SVG Watch"
+            "fr": "Applications mobiles",
+            "en": "Mobile applications"
         },
-        "year": "2025",
-        "id": "watch",
+        "year": "2022-2024-2025",
+        "id": "apps",
         "description": {
-            "fr": "Montre crée dans le cadre de nos cours de graphisme à Gobelins. Le but était de reproduire une montre en utilisant le logiciel Illustrator à partir d'une image de référence)",
-            "en": "Watch created as part of our graphic design courses at Gobelins. The goal was to reproduce a watch using Illustrator software from a reference image."
+            "fr": "Ces applications ont été réalisées en équipe dans le cadre de projets scolaires ou personels. Elles ont été réalisées en utilisant les technologies Dart/Flutter.",
+            "en": "These applications were created in a team as part of school or personal projects. They were created using Dart/Flutter technologies."
         },
         "type": {
-            "fr": "Graphisme",
-            "en": "Graphic Design"
+            "fr": "Application Mobile",
+            "en": "Mobile App"
         },
         "category": "school"
     },
@@ -85,5 +86,39 @@
             "en": "Instagram Filter"
         },
         "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Cohabitation",
+            "en": "Cohabitation"
+        },
+        "year": "2024",
+        "id": "cohabitation",
+        "description": {
+            "fr": "Projection Mapping de multiples scènes de vie dans un immeuble.\nUtilisation d’un outil de mapping entièrement crée pour l’occasion avec Processing (P5.js) en JavaScript.",
+            "en": "Projection Mapping of multiple scenes of life in a building.\nUse of a mapping tool entirely created for the occasion with Processing (P5.js) in JavaScript."
+        },
+        "type": {
+            "fr": "Installation",
+            "en": "Installation"
+        },
+        "category": "personal"
+    },
+    {
+        "name": {
+            "fr": "Montre SVG",
+            "en": "SVG Watch"
+        },
+        "year": "2025",
+        "id": "watch",
+        "description": {
+            "fr": "Montre crée dans le cadre de nos cours de graphisme à Gobelins. Le but était de reproduire une montre en utilisant le logiciel Illustrator à partir d'une image de référence)",
+            "en": "Watch created as part of our graphic design courses at Gobelins. The goal was to reproduce a watch using Illustrator software from a reference image."
+        },
+        "type": {
+            "fr": "Graphisme",
+            "en": "Graphic Design"
+        },
+        "category": "school"
     }
 ]

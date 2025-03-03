@@ -31,7 +31,7 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
                 <h3 class="text">— ${project.name[language]}</h3>
                 <p class="text">${project.year}</p>
             </div>
-            <img src="assets/imgs/ui/arrow_right.svg" alt="See more" class="arrow">
+            <img src="assets/imgs/ui/arrow_right.svg" alt="See more" class="arrow need-invert">
         `;
         projectsList.appendChild(projectElement);
     });
@@ -47,7 +47,7 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
                 <h3>${selectedProject.name.en}</h3>
                 <p>${selectedProject.year}</p>
                 <p>${selectedProject.description.en}</p> */
-            preview.querySelector('.preview-img').src = getProjectBasePath(selectedProject.id) + 'preview.png';
+            preview.querySelector('.preview-img').src = getProjectBasePath(selectedProject.id) + '0.png';
             preview.querySelector('.preview-title').innerText = selectedProject.name[language];
             preview.querySelector('.preview-year').innerText = selectedProject.year;
         });
@@ -59,12 +59,13 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
         element.addEventListener('click', (e) => {
             //showProjectPanel();
             const projectView = document.querySelector('#project-view');
-            projectView.style.backgroundColor = selectedProject.color;
+            projectView.style.backgroundColor = selectedProject.color || /* 'transparent' */document.documentElement.style.getPropertyValue('--color1');
             projectView.style.transform = 'translateX(50vw)';
             document.querySelector("#main-view").style.width = '50vw';
+            document.querySelector("header").style.width = '50vw';
             document.querySelector("#home .text").style.fontSize = '1rem';
 
-            document.querySelectorAll("#projects > li.project").forEach(element => {
+            document.querySelectorAll("#projects li.project").forEach(element => {
                 element.classList.remove('active');
             });
             element.classList.add('active');
@@ -73,7 +74,47 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
             projectView.querySelector('.project-year').innerText = selectedProject.year;
             projectView.querySelector('.project-description').innerText = selectedProject.description[language];
             projectView.querySelector('.project-tags').innerHTML = `<span class="text tag">${selectedProject.type[language]}</span>`;
+            projectView.querySelector('.project-pictures').innerHTML = '';
+            if (!selectedProject.filecount) return;
+            for (let i = 0; i < selectedProject.filecount; i++) {
+                let img = document.createElement('img');
+                img.src = getProjectBasePath(selectedProject.id) + i + '.png';
+                projectView.querySelector('.project-pictures').appendChild(img);
+
+                // img.style.right = `${Math.random() * 50}%`;
+                // img.style.bottom = `${Math.random() * 30}%`;
+                //img.style.transform = `rotate(${Math.random() * 360}deg) translate(-50%, -50%)`;
+
+                img.style.top = `${i * 10}px`;
+                img.style.left = `${i * 10}px`;
+            }
         });
+    });
+
+
+    let concernedElements = [
+        ...document.querySelectorAll('.text'),
+        ...document.querySelectorAll('.project'),
+        ...document.querySelectorAll('.tag'),
+        ...document.querySelectorAll('.need-invert'),
+        ...document.querySelectorAll('.need-child-invert'),
+        /* ...document.querySelectorAll('#work') */
+    ];
+
+    concernedElements.forEach((el, i) => {
+        let div = document.createElement('div');
+        div.classList.add('invert-element');
+        console.log(el.classList, el.classList.contains('.need-child-invert'));
+
+        if(!el.classList.contains('need-child-invert')) {
+            el.parentNode.insertBefore(div, el);
+            div.appendChild(el);
+        } else {
+            //put el content in the div, remove the content of el and put the div inside the element
+            div.innerHTML = el.innerHTML;
+            el.innerHTML = '';
+            el.appendChild(div);
+        }
     });
 });
 
@@ -107,12 +148,13 @@ window.addEventListener('scroll', (e) => {
 
     let activeBackground = background.id.replace('background', '');
 
-    if (scrollAmount > window.innerHeight) {
+    //if (scrollAmount > window.innerHeight) {
+    /* if (scrollAmount > 0) {
         if (activeBackground === '1') {
             backgroundChangeAnim(1);
         }
 
-        const middle = scrollPercentage /* + window.innerHeight / 2 */;
+        const middle = scrollPercentage + window.innerHeight / 2;
         const projectsDiv = document.querySelector('#work');
 
         //projectsDiv.style.transform = `translateY(${middle}px)`;
@@ -123,13 +165,14 @@ window.addEventListener('scroll', (e) => {
         if (activeBackground === '2') {
             backgroundChangeAnim(1);
         }
-    }
+    } */
 });
 
 
 
-function showProjectPanel() {
-    const element = document.querySelector('#work');
+function scrollToElement(query) {
+    closeProjectView();
+    const element = document.querySelector(query);
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - 300;
 
