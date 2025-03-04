@@ -62,9 +62,11 @@
     color: var(--color2);
     background-color: var(--color1);
     transition: none;
+    align-items: center;
 }
 
 .project * {
+    vertical-align: middle;
     pointer-events: none;
 }
 
@@ -75,12 +77,12 @@
 }
 
 .project img.arrow {
-    display: none;
+    opacity: 0;
     transition: none;
 }
 
 .project:hover img.arrow, .project.active img.arrow {
-    display: inline;
+    opacity: 1;
     transition: none;
 }
 
@@ -91,5 +93,5 @@
 .project-content {
     transition: none;
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }

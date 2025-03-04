@@ -36,6 +36,8 @@ body {
     transition: none;
     filter: invert(1);
     mix-blend-mode: difference;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -100,7 +102,7 @@ main {
     justify-content: center;
     align-items: center;
     /* padding-top: 10%; */
-    gap: 50vh;
+    /* gap: 50vh; */
 }
 
 #main-view {

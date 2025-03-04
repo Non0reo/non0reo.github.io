@@ -144,7 +144,7 @@ window.addEventListener('scroll', (e) => {
     const scrollPercentage = scrollAmount / pageSize * 100;
     //console.log(scrollAmount, pageSize, scrollPercentage);
     //console.log(document.documentElement.scrollTop, window.innerHeight, document.documentElement.scrollHeight - document.documentElement.clientHeight, scrollPercentage);
-    console.log(scrollAmount, window.innerHeight);
+    //console.log(scrollAmount, window.innerHeight);
 
     let activeBackground = background.id.replace('background', '');
 
