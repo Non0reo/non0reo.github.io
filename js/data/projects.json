@@ -16,7 +16,7 @@
         },
         "category": "personal",
         "color": "#3b3a67",
-        "filecount": 6
+        "filecount": 5
     },
     {
         "name": {
@@ -102,7 +102,8 @@
             "fr": "Installation",
             "en": "Installation"
         },
-        "category": "personal"
+        "category": "personal",
+        "filecount": 3
     },
     {
         "name": {
