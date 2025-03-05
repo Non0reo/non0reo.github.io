@@ -59,7 +59,8 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
         element.addEventListener('click', (e) => {
             //showProjectPanel();
             const projectView = document.querySelector('#project-view');
-            projectView.style.backgroundColor = selectedProject.color || /* 'transparent' */document.documentElement.style.getPropertyValue('--color1');
+            //projectView.style.backgroundColor = selectedProject.color || /* 'transparent' */document.documentElement.style.getPropertyValue('--color1');
+            projectView.style.backgroundColor = 'white';
             projectView.style.transform = 'translateX(50vw)';
             document.querySelector("#main-view").style.width = '50vw';
             document.querySelector("header").style.width = '50vw';
