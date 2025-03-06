@@ -78,26 +78,7 @@ document.body.addEventListener('mousemove', (e) => {
     background2.style.top = e.clientY + 'px';
 });
 
-/* document.body.addEventListener('mousedown', (e) => {
-    backgroundGrow('custom', {
-        top: e.clientY + 'px',
-        left: e.clientX + 'px',
-    });
-    setTimeout(() => {
-        backgroundNone();
-        swapRootColors();
-    }, 1000);
-});
-document.body.addEventListener('mouseup', (e) => backgroundPoint()); */
-
-
-//timing func: cubic-bezier(.67,.21,.19,1.03);
-//timing inverse: cubic-bezier(.33,.79,.81,-0.03);
-
-
-
-//Size on Load
-
+//Onload event
 window.onload = () => {
     /* console.log(
         '%cShantay you stay!',
@@ -119,6 +100,38 @@ window.onload = () => {
     });
 
 }
+
+//Scroll event
+window.addEventListener('scroll', (e) => {
+    const scrollAmount = (document.body.scrollTop || document.documentElement.scrollTop);
+    const pageSize = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = scrollAmount / pageSize * 100;
+    //console.log(scrollAmount, pageSize, scrollPercentage);
+    //console.log(document.documentElement.scrollTop, window.innerHeight, document.documentElement.scrollHeight - document.documentElement.clientHeight, scrollPercentage);
+    //console.log(scrollAmount, window.innerHeight);
+
+    let activeBackground = background.id.replace('background', '');
+
+    //if (scrollAmount > window.innerHeight) {
+    /* if (scrollAmount > 0) {
+        if (activeBackground === '1') {
+            backgroundChangeAnim(1);
+        }
+
+        const middle = scrollPercentage + window.innerHeight / 2;
+        const projectsDiv = document.querySelector('#work');
+
+        //projectsDiv.style.transform = `translateY(${middle}px)`;
+
+
+    }
+    if (scrollAmount < window.innerHeight) {
+        if (activeBackground === '2') {
+            backgroundChangeAnim(1);
+        }
+    } */
+});
+
 
 
 

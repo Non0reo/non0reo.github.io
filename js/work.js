@@ -105,7 +105,6 @@ fetch('js/data/projects.json').then(response => response.json()).then(data => {
     concernedElements.forEach((el, i) => {
         let div = document.createElement('div');
         div.classList.add('invert-element');
-        console.log(el.classList, el.classList.contains('.need-child-invert'));
 
         if(!el.classList.contains('need-child-invert')) {
             el.parentNode.insertBefore(div, el);
@@ -139,35 +138,6 @@ document.body.addEventListener('mousemove', (e) => {
         backgroundChangeAnim({clientX: window.innerWidth / 2, clientY: window.innerHeight / 2}, 1);
     }
 } */
-window.addEventListener('scroll', (e) => {
-    const scrollAmount = (document.body.scrollTop || document.documentElement.scrollTop);
-    const pageSize = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrollPercentage = scrollAmount / pageSize * 100;
-    //console.log(scrollAmount, pageSize, scrollPercentage);
-    //console.log(document.documentElement.scrollTop, window.innerHeight, document.documentElement.scrollHeight - document.documentElement.clientHeight, scrollPercentage);
-    //console.log(scrollAmount, window.innerHeight);
-
-    let activeBackground = background.id.replace('background', '');
-
-    //if (scrollAmount > window.innerHeight) {
-    /* if (scrollAmount > 0) {
-        if (activeBackground === '1') {
-            backgroundChangeAnim(1);
-        }
-
-        const middle = scrollPercentage + window.innerHeight / 2;
-        const projectsDiv = document.querySelector('#work');
-
-        //projectsDiv.style.transform = `translateY(${middle}px)`;
-
-
-    }
-    if (scrollAmount < window.innerHeight) {
-        if (activeBackground === '2') {
-            backgroundChangeAnim(1);
-        }
-    } */
-});
 
 
 

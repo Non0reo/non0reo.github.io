@@ -20,6 +20,24 @@
     },
     {
         "name": {
+            "fr": "Réalité augmentée",
+            "en": "Augmented reality"
+        },
+        "year": "2022-2024",
+        "id": "ar",
+        "description": {
+            "fr": "Déformation d’une image en utilisant des marqueurs ARUCO en à l’aide d’un Canvas HTML et du JavaScript. Hand-tracking et affichage en perspective d’une image.",
+            "en": "Deformation of an image using ARUCO markers with the help of an HTML Canvas and JavaScript. Hand-tracking and perspective display of an image."
+        },
+        "type": {
+            "fr": "Experience Web",
+            "en": "Web Experience"
+        },
+        "category": "personal",
+        "filecount": 5
+    },
+    {
+        "name": {
             "fr": "Catline Banana",
             "en": "Catline Banana"
         },
@@ -34,24 +52,8 @@
             "en": "Installation"
         },
         "category": "personal",
-        "color": "#544D4D"
-    },
-    {
-        "name": {
-            "fr": "Réalité augmentée",
-            "en": "Augmented reality"
-        },
-        "year": "2022-2024",
-        "id": "ar",
-        "description": {
-            "fr": "Déformation d’une image en utilisant des marqueurs ARUCO en à l’aide d’un Canvas HTML et du JavaScript. Hand-tracking et affichage en perspective d’une image.",
-            "en": "Deformation of an image using ARUCO markers with the help of an HTML Canvas and JavaScript. Hand-tracking and perspective display of an image."
-        },
-        "type": {
-            "fr": "Experience Web",
-            "en": "Web Experience"
-        },
-        "category": "personal"
+        "color": "#544D4D",
+        "filecount": 4
     },
     {
         "name": {
