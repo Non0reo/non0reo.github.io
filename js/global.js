@@ -115,7 +115,7 @@ window.addEventListener('scroll', (e) => {
     //if (scrollAmount > window.innerHeight) {
     /* if (scrollAmount > 0) {
         if (activeBackground === '1') {
-            backgroundChangeAnim(1);
+            backgroundChangeAnim();
         }
 
         const middle = scrollPercentage + window.innerHeight / 2;
@@ -127,7 +127,7 @@ window.addEventListener('scroll', (e) => {
     }
     if (scrollAmount < window.innerHeight) {
         if (activeBackground === '2') {
-            backgroundChangeAnim(1);
+            backgroundChangeAnim();
         }
     } */
 });
@@ -161,7 +161,7 @@ function changeMainBackgorund() {
 }
 
 let pointTimeout;
-function backgroundChangeAnim(duration) {
+function backgroundChangeAnim(duration = 1) {
     clearTimeout(pointTimeout);
     backgroundGrow('custom', {
         top: background.style.top,

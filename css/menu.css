@@ -1,0 +1,56 @@
+:root {
+    --modeButtonOffset: 100%;
+}
+
+h1.text {
+    font-weight: normal;
+    font-size: 3rem;
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+header {
+    width: calc(100vw - (100vw - 100%));
+    /* background-color: var(--color1); */
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    filter: invert(1);
+    mix-blend-mode: difference;
+    width: inherit;
+    transition: width 1s cubic-bezier(.67,.21,.19,1.03);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+/* .light-swap-div {
+    display: flex;
+}
+
+.light-swap-div li {
+    position: fixed;
+}
+
+.light-button {
+    right: -300px;
+}
+
+.dark-button {
+    right: 0px;
+}
+
+ */

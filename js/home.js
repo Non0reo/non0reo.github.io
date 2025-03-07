@@ -42,6 +42,6 @@ createCustomText();
 
 document.querySelector('#see-projects-btn').addEventListener('click', (e) => {
     /* document.querySelector('.projects').scrollIntoView({behavior: 'smooth'}); */
-    backgroundChangeAnim(1);
+    backgroundChangeAnim();
     console.log(e)
 });
